@@ -38,7 +38,7 @@ export function Navigation() {
         className={cn(
           "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
           scrolled
-            ? "bg-black/60 backdrop-blur-xl border-b border-white/10"
+            ? "bg-white/60 dark:bg-black/60 backdrop-blur-xl border-b border-gray-200 dark:border-white/10"
             : "bg-transparent",
         )}
         initial={{ y: -80 }}
@@ -52,7 +52,7 @@ export function Navigation() {
               e.preventDefault();
               handleClick("#hero");
             }}
-            className="text-white font-bold text-xl tracking-tight hover:text-blue-400 transition-colors"
+            className="text-gray-900 dark:text-white font-bold text-xl tracking-tight hover:text-blue-500 transition-colors"
           >
             HT<span className="text-blue-500">.dev</span>
           </a>
@@ -63,7 +63,7 @@ export function Navigation() {
               <button
                 key={item.href}
                 onClick={() => handleClick(item.href)}
-                className="px-3.5 py-2 text-sm text-gray-400 hover:text-white transition-colors rounded-lg hover:bg-white/5"
+                className="px-3.5 py-2 text-sm text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors rounded-lg hover:bg-gray-100 dark:hover:bg-white/5"
               >
                 {item.label}
               </button>
@@ -72,7 +72,7 @@ export function Navigation() {
 
           {/* Mobile toggle */}
           <button
-            className="md:hidden p-2 text-white/80 hover:text-white"
+            className="md:hidden p-2 text-gray-600 dark:text-white/80 hover:text-gray-900 dark:hover:text-white"
             onClick={() => setMenuOpen((v) => !v)}
             aria-label="Toggle menu"
           >
@@ -86,14 +86,14 @@ export function Navigation() {
         {menuOpen && (
           <>
             <motion.div
-              className="fixed inset-0 z-40 bg-black/80 backdrop-blur-md md:hidden"
+              className="fixed inset-0 z-40 bg-white/80 dark:bg-black/80 backdrop-blur-md md:hidden"
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={() => setMenuOpen(false)}
             />
             <motion.div
-              className="fixed top-16 left-4 right-4 z-50 rounded-2xl border border-white/10 bg-black/90 backdrop-blur-xl p-4 md:hidden"
+              className="fixed top-16 left-4 right-4 z-50 rounded-2xl border border-gray-200 dark:border-white/10 bg-white/95 dark:bg-black/90 backdrop-blur-xl p-4 md:hidden"
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
@@ -105,7 +105,7 @@ export function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   onClick={() => handleClick(item.href)}
-                  className="block w-full text-left px-4 py-3 text-gray-300 hover:text-white hover:bg-white/5 rounded-xl transition-colors"
+                  className="block w-full text-left px-4 py-3 text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5 rounded-xl transition-colors"
                 >
                   {item.label}
                 </motion.button>

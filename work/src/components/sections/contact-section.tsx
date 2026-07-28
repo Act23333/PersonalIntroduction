@@ -39,12 +39,12 @@ function ContactItem({
       </div>
       <div className="flex-1 min-w-0">
         <p className="text-gray-500 text-xs mb-0.5">{label}</p>
-        <p className="text-white font-medium truncate">{value}</p>
+        <p className="text-gray-900 dark:text-white font-medium truncate">{value}</p>
       </div>
       {copyable && (
         <button
           onClick={handleCopy}
-          className="p-2 rounded-lg hover:bg-white/5 text-gray-500 hover:text-white transition-colors cursor-pointer"
+          className="p-2 rounded-lg hover:bg-white/5 text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors cursor-pointer"
           aria-label={`复制 ${label}`}
         >
           {copied ? (

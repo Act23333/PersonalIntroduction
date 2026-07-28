@@ -21,8 +21,8 @@ export function GlassCard({
   return (
     <motion.div
       className={cn(
-        "relative overflow-hidden rounded-3xl border border-white/10",
-        "bg-white/[0.06] backdrop-blur-xl",
+        "relative overflow-hidden rounded-3xl border border-gray-200 dark:border-white/10",
+        "bg-white/50 dark:bg-white/[0.06] backdrop-blur-xl",
         "p-6 md:p-8",
         glow && "before:absolute before:inset-0 before:-z-10 before:bg-gradient-to-br before:from-blue-500/10 before:to-purple-500/10 before:opacity-0 before:transition-opacity before:duration-500 hover:before:opacity-100",
         className,

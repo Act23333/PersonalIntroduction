@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import { ThemeProvider } from "@/components/effects/theme-provider";
 import { ClientShell } from "@/components/layout/client-shell";
 import "./globals.css";
 
@@ -44,11 +45,13 @@ export default function RootLayout({
       lang="zh-CN"
       className={`${geistSans.variable} ${geistMono.variable} dark h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-white">
-        <ClientShell />
-        <div className="relative z-10 flex flex-col flex-1">
-          {children}
-        </div>
+      <body className="min-h-full flex flex-col">
+        <ThemeProvider>
+          <ClientShell />
+          <div className="relative z-10 flex flex-col flex-1">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );

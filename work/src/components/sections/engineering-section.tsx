@@ -53,13 +53,13 @@ function EngineeringStepCard({
           className="flex-1 pb-12 last:pb-0"
           whileHover={{ x: isLeft ? 4 : 0 }}
         >
-          <h3 className="text-white font-semibold text-lg mb-1">{step.step}</h3>
-          <p className="text-gray-400 text-sm mb-3">{step.description}</p>
+          <h3 className="text-gray-900 dark:text-white font-semibold text-2xl mb-1">{step.step}</h3>
+          <p className="text-gray-500 dark:text-gray-400 text-sm mb-3">{step.description}</p>
           <div className="flex flex-wrap gap-2">
             {step.details.map((d) => (
               <span
                 key={d}
-                className="px-3 py-1 text-xs text-gray-500 bg-white/[0.04] border border-white/[0.06] rounded-full"
+                className="px-3 py-1 text-xs text-gray-500 bg-gray-200 dark:bg-white/[0.04] border border-gray-300 dark:border-white/[0.06] rounded-full"
               >
                 {d}
               </span>

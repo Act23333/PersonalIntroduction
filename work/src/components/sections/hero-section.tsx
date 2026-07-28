@@ -30,7 +30,7 @@ export function HeroSection() {
       >
         {/* Greeting */}
         <motion.p
-          className="text-gray-400 text-lg mb-4 font-mono"
+          className="text-gray-500 dark:text-gray-400 text-xl mb-4 font-mono"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.2 }}
@@ -39,13 +39,13 @@ export function HeroSection() {
         </motion.p>
 
         {/* Name */}
-        <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 tracking-tight">
+        <h1 className="text-6xl md:text-8xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight">
           <GradientText as="span">{profile.nameEn}</GradientText>
         </h1>
 
         {/* Title */}
         <motion.p
-          className="text-xl md:text-2xl text-gray-300 mb-3"
+          className="text-2xl md:text-3xl text-gray-700 dark:text-gray-300 mb-3"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
@@ -54,7 +54,7 @@ export function HeroSection() {
         </motion.p>
 
         <motion.p
-          className="text-gray-500 mb-8 text-base"
+          className="text-gray-600 dark:text-gray-500 mb-8 text-lg"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.5 }}
@@ -72,7 +72,7 @@ export function HeroSection() {
           {profile.tags.map((tag) => (
             <span
               key={tag}
-              className="px-4 py-1.5 text-sm text-blue-300 bg-blue-500/10 border border-blue-500/20 rounded-full"
+              className="px-4 py-1.5 text-sm text-blue-700 dark:text-blue-300 bg-blue-500/10 border border-blue-500/20 rounded-full"
             >
               {tag}
             </span>
@@ -86,9 +86,9 @@ export function HeroSection() {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.7 }}
         >
-          <p className="text-gray-500 text-sm">{profile.tagline}</p>
-          <p className="text-gray-600 text-xs">{profile.humilityNote}</p>
-          <p className="text-gray-600 text-xs">{profile.aiNote}</p>
+          <p className="text-gray-600 dark:text-gray-500 text-sm">{profile.tagline}</p>
+          <p className="text-gray-500 dark:text-gray-600 text-xs">{profile.humilityNote}</p>
+          <p className="text-gray-500 dark:text-gray-600 text-xs">{profile.aiNote}</p>
         </motion.div>
 
         {/* CTA */}
@@ -105,11 +105,11 @@ export function HeroSection() {
 
           {/* Scroll hint */}
           <div className="flex flex-col items-center gap-1 mt-4">
-            <span className="text-gray-600 text-xs tracking-widest uppercase">
+            <span className="text-gray-500 dark:text-gray-600 text-xs tracking-widest uppercase">
               Scroll to Explore
             </span>
             <motion.div
-              className="flex flex-col items-center gap-0.5 text-gray-700"
+              className="flex flex-col items-center gap-0.5 text-gray-400 dark:text-gray-700"
               animate={{ y: [0, 6, 0] }}
               transition={{ repeat: Infinity, duration: 2, ease: "easeInOut" }}
             >

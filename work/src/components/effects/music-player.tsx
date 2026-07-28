@@ -206,7 +206,7 @@ export function MusicPlayer() {
       {/* Floating draggable toggle */}
       <motion.button
         ref={nodeRef}
-        className="fixed z-50 w-12 h-12 rounded-full bg-white/10 backdrop-blur-xl border border-white/20 flex items-center justify-center text-white/70 hover:text-white hover:bg-white/20 shadow-lg cursor-grab active:cursor-grabbing select-none touch-none"
+        className="fixed z-50 w-12 h-12 rounded-full bg-white/70 dark:bg-white/10 backdrop-blur-xl border border-gray-300 dark:border-white/20 flex items-center justify-center text-gray-800 dark:text-white/70 hover:text-black dark:hover:text-white hover:bg-white dark:hover:bg-white/20 shadow-lg cursor-grab active:cursor-grabbing select-none touch-none"
         style={{
           left: pos.x,
           top: pos.y,

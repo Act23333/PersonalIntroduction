@@ -31,10 +31,10 @@ function ProjectCard({
               <Cpu className="w-5 h-5 text-blue-400" />
             </div>
             <div>
-              <h3 className="text-white font-semibold text-xl">
+              <h3 className="text-gray-900 dark:text-white font-semibold text-2xl">
                 {project.name}
               </h3>
-              <p className="text-gray-500 text-sm mt-0.5">{project.description}</p>
+              <p className="text-gray-500 text-base mt-0.5">{project.description}</p>
             </div>
           </div>
         </div>
@@ -44,7 +44,7 @@ function ProjectCard({
           {project.techStack.map((tech) => (
             <span
               key={tech}
-              className="px-2.5 py-0.5 text-xs text-gray-400 bg-white/[0.04] border border-white/[0.06] rounded-full"
+              className="px-2.5 py-0.5 text-xs text-gray-400 bg-gray-200 dark:bg-white/[0.04] border border-gray-300 dark:border-white/[0.06] rounded-full"
             >
               {tech}
             </span>
@@ -62,8 +62,8 @@ function ProjectCard({
                 <Code className="w-3.5 h-3.5 text-blue-400" />
               </div>
               <div>
-                <p className="text-white text-sm font-medium">{h.label}</p>
-                <p className="text-gray-500 text-xs mt-0.5 leading-relaxed">
+                <p className="text-gray-900 dark:text-white text-base font-medium">{h.label}</p>
+                <p className="text-gray-500 text-sm mt-0.5 leading-relaxed">
                   {h.description}
                 </p>
               </div>
@@ -73,10 +73,10 @@ function ProjectCard({
 
         {/* Architecture diagram expandable */}
         {project.architecture && (
-          <div className="mt-5 pt-4 border-t border-white/5">
+          <div className="mt-5 pt-4 border-t border-gray-200 dark:border-white/5">
             <button
               onClick={() => setExpanded(!expanded)}
-              className="flex items-center gap-2 text-sm text-gray-400 hover:text-white transition-colors w-full"
+              className="flex items-center gap-2 text-sm text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors w-full"
             >
               <ChevronRight
                 size={16}
@@ -87,7 +87,7 @@ function ProjectCard({
             <AnimatePresence>
               {expanded && (
                 <motion.pre
-                  className="mt-3 p-4 rounded-xl bg-black/40 border border-white/5 text-xs text-gray-400 font-mono leading-relaxed overflow-x-auto"
+                  className="mt-3 p-4 rounded-xl bg-gray-100 dark:bg-black/40 border border-gray-200 dark:border-white/5 text-xs text-gray-400 font-mono leading-relaxed overflow-x-auto"
                   initial={{ height: 0, opacity: 0 }}
                   animate={{ height: "auto", opacity: 1 }}
                   exit={{ height: 0, opacity: 0 }}

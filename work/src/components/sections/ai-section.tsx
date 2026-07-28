@@ -42,10 +42,10 @@ export function AISection() {
                 <Bot className="w-8 h-8 text-white" />
               </div>
               <div>
-                <h3 className="text-white font-bold text-xl mb-1">
+                <h3 className="text-gray-900 dark:text-white font-bold text-2xl mb-1">
                   {aiPhilosophy.title}
                 </h3>
-                <p className="text-gray-400">{aiPhilosophy.description}</p>
+                <p className="text-gray-600 dark:text-gray-400">{aiPhilosophy.description}</p>
               </div>
             </div>
           </div>
@@ -58,14 +58,14 @@ export function AISection() {
             return (
               <ScrollReveal key={step.phase} delay={i * 0.1}>
                 <motion.div
-                  className="relative rounded-2xl border border-white/[0.06] bg-white/[0.03] p-5 h-full hover:bg-white/[0.05] transition-colors"
+                  className="relative rounded-2xl border border-gray-300 dark:border-white/[0.06] bg-white/[0.03] p-5 h-full hover:bg-white/[0.05] transition-colors"
                   whileHover={{ y: -2 }}
                 >
                   <div className="flex items-center gap-3 mb-4">
                     <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
                       <Icon className="w-5 h-5 text-blue-400" />
                     </div>
-                    <span className="text-white font-semibold text-sm">
+                    <span className="text-gray-900 dark:text-white font-semibold text-sm">
                       {step.phase}
                     </span>
                   </div>
@@ -73,20 +73,20 @@ export function AISection() {
                   <div className="space-y-3">
                     <div className="flex items-start gap-2">
                       <Bot className="w-4 h-4 text-purple-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-400 text-xs leading-relaxed">
+                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                         {step.aiRole}
                       </p>
                     </div>
                     <div className="flex items-start gap-2">
                       <User className="w-4 h-4 text-blue-400 mt-0.5 flex-shrink-0" />
-                      <p className="text-gray-400 text-xs leading-relaxed">
+                      <p className="text-gray-500 dark:text-gray-400 text-sm leading-relaxed">
                         {step.developerRole}
                       </p>
                     </div>
                   </div>
 
                   {/* Arrow connector between AI and Dev */}
-                  <div className="mt-4 pt-3 border-t border-white/5 flex items-center justify-center">
+                  <div className="mt-4 pt-3 border-t border-gray-200 dark:border-white/5 flex items-center justify-center">
                     <ArrowRight className="w-4 h-4 text-gray-600" />
                   </div>
                 </motion.div>

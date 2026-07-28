@@ -25,9 +25,9 @@ const iconMap: Record<string, LucideIcon> = {
 function SkillBar({ name, level }: { name: string; level: number }) {
   return (
     <div className="mb-3 last:mb-0">
-      <div className="flex justify-between text-sm mb-1.5">
-        <span className="text-gray-300">{name}</span>
-        <span className="text-gray-600 text-xs">
+      <div className="flex justify-between text-base mb-1.5">
+        <span className="text-gray-700 dark:text-gray-300">{name}</span>
+        <span className="text-gray-500 dark:text-gray-600 text-sm">
           {level === 5
             ? "精通"
             : level === 4
@@ -61,7 +61,7 @@ function SkillCategoryCard({ category }: { category: SkillCategory }) {
         <div className="w-10 h-10 rounded-xl bg-blue-500/10 flex items-center justify-center">
           <Icon className="w-5 h-5 text-blue-400" />
         </div>
-        <h3 className="text-white font-semibold text-lg">{category.category}</h3>
+        <h3 className="text-gray-900 dark:text-white font-semibold text-2xl">{category.category}</h3>
       </div>
       {category.skills.map((skill) => (
         <SkillBar key={skill.name} name={skill.name} level={skill.level} />
