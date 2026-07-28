@@ -12,7 +12,7 @@ export const profile = {
   education: "本科",
   phone: "15170816345",
   email: "2177667252@qq.com",
-  github: "https://github.com/Act23333/IceAmericanoMall",
+  github: "https://github.com/Act23333/",
   jobPreferences: ["Java后端开发", "运维", "测试", "其他IT专业"],
   tags: ["Spring Cloud", "Redis", "Microservices", "AI Application"],
 };
